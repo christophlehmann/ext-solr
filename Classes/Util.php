@@ -95,7 +95,7 @@ class Util
         $site = $siteRepository->getSiteByPageId($rootPageId);
         $siteHash = $site->getSiteHash();
 
-        $documentId = $siteHash . '/' . $table . '/' . $uid;
+        $documentId = $siteHash . '/' . $table . '/' . $uid . '/' . self::getLanguageUid();
         if (!empty($additionalIdParameters)) {
             $documentId .= '/' . $additionalIdParameters;
         }
