@@ -20,21 +20,21 @@
     "source": "https://github.com/TYPO3-Solr/ext-solr"
   },
   "require": {
-    "php": ">=7.2.0",
+    "php": ">=7.4.0",
     "ext-json": "*",
-    "typo3/cms-core": "^10.4.10",
-    "typo3/cms-backend": "^10.4.10",
-    "typo3/cms-extbase": "^10.4.10",
-    "typo3/cms-frontend": "^10.4.10",
-    "typo3/cms-fluid": "^10.4.10",
-    "typo3/cms-reports": "^10.4.10",
-    "typo3/cms-scheduler": "^10.4.10",
-    "typo3/cms-tstemplate": "^10.4.10",
+    "typo3/cms-core": "^11",
+    "typo3/cms-backend": "^11",
+    "typo3/cms-extbase": "^11",
+    "typo3/cms-frontend": "^11",
+    "typo3/cms-fluid": "^11",
+    "typo3/cms-reports": "^11",
+    "typo3/cms-scheduler": "^11",
+    "typo3/cms-tstemplate": "^11",
     "solarium/solarium": ">=6.0 <7.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^7.5.6 || ^8",
-    "nimut/testing-framework": "^5.0.0"
+    "nimut/testing-framework": "^5.2"
   },
   "replace": {
     "typo3-ter/solr": "self.version",
@@ -73,7 +73,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "11.1.x-dev"
+      "dev-master": "11.2.x-dev"
     },
     "typo3/cms": {
       "extension-key": "solr",
