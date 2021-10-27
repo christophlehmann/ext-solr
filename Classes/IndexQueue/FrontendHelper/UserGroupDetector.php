@@ -30,9 +30,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectPostInitHookInterface;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
-use TYPO3\CMS\Frontend\Page\PageRepository;
-use TYPO3\CMS\Frontend\Page\PageRepositoryGetPageHookInterface;
-use TYPO3\CMS\Frontend\Page\PageRepositoryGetPageOverlayHookInterface;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
+use TYPO3\CMS\Core\Domain\Repository\PageRepositoryGetPageHookInterface;
+use TYPO3\CMS\Core\Domain\Repository\PageRepositoryGetPageOverlayHookInterface;
 
 /**
  * The UserGroupDetector is responsible to identify the fe_group references on records that are visible on the page (not the page itself).
@@ -137,7 +137,7 @@ class UserGroupDetector extends AbstractFrontendHelper implements
      *
      * @param int $uid The page ID
      * @param bool $disableGroupAccessCheck If set, the check for group access is disabled. VERY rarely used
-     * @param PageRepository $parentObject parent \TYPO3\CMS\Frontend\Page\PageRepository object
+     * @param PageRepository $parentObject parent \TYPO3\CMS\Core\Domain\Repository\PageRepository object
      */
     public function getPage_preProcess(
         &$uid,
@@ -154,7 +154,7 @@ class UserGroupDetector extends AbstractFrontendHelper implements
      *
      * @param array $pageRecord Page record
      * @param int $languageUid Overlay language ID
-     * @param PageRepository $parentObject Parent \TYPO3\CMS\Frontend\Page\PageRepository object
+     * @param PageRepository $parentObject Parent \TYPO3\CMS\Core\Domain\Repository\PageRepository object
      */
     public function getPageOverlay_preProcess(
         &$pageRecord,

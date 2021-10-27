@@ -26,7 +26,7 @@ namespace ApacheSolrForTypo3\Solr\Access;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
-use TYPO3\CMS\Frontend\Page\PageRepository;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 
 /**
  * "Access Rootline", represents all pages and specifically those setting
