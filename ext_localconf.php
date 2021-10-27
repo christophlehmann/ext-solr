@@ -220,43 +220,43 @@ if (!function_exists('strptime')) {
     # ----- # ----- # ----- # ----- # ----- # ----- # ----- # ----- # ----- #
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'ApacheSolrForTypo3.solr',
+        'Solr',
         'pi_results',
         [
-            'Search' => 'results,form,detail'
+            \ApacheSolrForTypo3\Solr\Controller\SearchController::class => 'results,form,detail'
         ],
         [
-            'Search' => 'results'
+            \ApacheSolrForTypo3\Solr\Controller\SearchController::class => 'results'
         ]
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'ApacheSolrForTypo3.solr',
+        'Solr',
         'pi_search',
         [
-            'Search' => 'form'
+            \ApacheSolrForTypo3\Solr\Controller\SearchController::class => 'form'
         ]
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'ApacheSolrForTypo3.solr',
+        'Solr',
         'pi_frequentlySearched',
         [
-            'Search' => 'frequentlySearched'
+            \ApacheSolrForTypo3\Solr\Controller\SearchController::class => 'frequentlySearched'
         ],
         [
-            'Search' => 'frequentlySearched'
+            \ApacheSolrForTypo3\Solr\Controller\SearchController::class => 'frequentlySearched'
         ]
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'ApacheSolrForTypo3.solr',
+        'Solr',
         'pi_suggest',
         [
-            'Suggest' => 'suggest'
+            \ApacheSolrForTypo3\Solr\Controller\SuggestController::class => 'suggest'
         ],
         [
-            'Suggest' => 'suggest'
+            \ApacheSolrForTypo3\Solr\Controller\SuggestController::class => 'suggest'
         ]
     );
 
