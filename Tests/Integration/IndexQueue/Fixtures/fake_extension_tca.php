@@ -28,9 +28,6 @@ return [
         ],
         'searchFields' => 'uid,title',
     ],
-    'interface' => [
-        'showRecordFieldList' => 'cruser_id,pid,sys_language_uid,l10n_parent,l10n_diffsource,hidden,starttime,endtime,title'
-    ],
     'columns' => [
         'sys_language_uid' => [
             'exclude' => 1,
@@ -51,7 +48,6 @@ return [
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => 1,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',

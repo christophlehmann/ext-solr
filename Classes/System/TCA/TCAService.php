@@ -2,6 +2,9 @@
 
 namespace ApacheSolrForTypo3\Solr\System\TCA;
 
+use TYPO3\CMS\Core\Context\Context;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /***************************************************************
  *  Copyright notice
  *
@@ -56,7 +59,7 @@ class TCAService
      */
     protected function getTime()
     {
-        return isset($GLOBALS['EXEC_TIME']) ? $GLOBALS['EXEC_TIME'] : time();
+        return GeneralUtility::makeInstance(Context::class)->getPropertyFromAspect('date', 'timestamp') ?? time();
     }
 
     /**
